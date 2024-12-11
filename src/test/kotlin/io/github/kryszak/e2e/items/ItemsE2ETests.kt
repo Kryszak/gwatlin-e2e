@@ -55,7 +55,7 @@ class ItemsE2ETests : ExpectSpec() {
         context("Skins") {
             val client = GWSkinsClient()
             expect("Fetch skins") {
-                val skinIds = client.getSkinIds().randomElements(100)
+                val skinIds = client.getSkinIds().randomElements(200)
                 shouldNotThrowAny { client.getSkins(skinIds) }
             }
         }

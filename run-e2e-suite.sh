@@ -25,3 +25,6 @@ set -euo pipefail
 
 # Item endpoints
 ./gradlew test --tests io.github.kryszak.e2e.items.ItemsE2ETests
+
+# Map info endpoints
+./gradlew test --tests io.github.kryszak.e2e.mapinfo.MapInfoE2ETests

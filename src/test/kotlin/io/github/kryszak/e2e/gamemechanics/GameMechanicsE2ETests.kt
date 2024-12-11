@@ -84,7 +84,7 @@ class GameMechanicsE2ETests : ExpectSpec() {
         }
         context("Traits") {
             val client = GWTraitsClient()
-            // TO BE FIXED
+            // FIX ME
             expect("Fetching random traits") {
                 val traitIds = client.getTraitIds().randomElements(100)
                 shouldThrowAny { client.getTraits(traitIds) }
