@@ -28,3 +28,6 @@ set -euo pipefail
 
 # Map info endpoints
 ./gradlew test --tests io.github.kryszak.e2e.mapinfo.MapInfoE2ETests
+
+# Miscellaneous endpoints
+./gradlew test --tests io.github.kryszak.e2e.miscellaneous.MiscellaneousE2ETests
