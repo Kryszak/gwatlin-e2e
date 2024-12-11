@@ -8,9 +8,10 @@ version = "0.0.1"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
-val gwatlinVersion = "2.1.0"
+val gwatlinVersion = "2.1.1"
 val kotestVersion = "5.9.1"
 
 dependencies {
