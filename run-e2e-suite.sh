@@ -9,3 +9,6 @@
 
 # Commerce endpoints
 ./gradlew test --tests io.github.kryszak.e2e.commerce.CommerceE2ETests
+
+# Daily rewards endpoints
+./gradlew test --tests io.github.kryszak.e2e.dailyrewards.DailyRewardsE2ETests
