@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Achievement endpoints
 ./gradlew test --tests  io.github.kryszak.e2e.achievement.AchievementE2ETests
 
@@ -20,3 +22,6 @@
 
 # Home instance endpoints
 ./gradlew test --tests io.github.kryszak.e2e.homeinstance.HomeInstanceE2ETests
+
+# Item endpoints
+./gradlew test --tests io.github.kryszak.e2e.items.ItemsE2ETests

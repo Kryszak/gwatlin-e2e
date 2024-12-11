@@ -4,7 +4,6 @@ import io.github.kryszak.gwatlin.api.homeinstance.GWHomeInstanceClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.core.spec.style.ExpectSpec
 import io.kotest.core.test.TestCaseOrder
-import kotlin.math.exp
 
 class HomeInstanceE2ETests: ExpectSpec() {
     override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
