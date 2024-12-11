@@ -17,7 +17,6 @@ class PvPE2ETests : ExpectSpec() {
                 val rankIds = client.getPvpRankIds()
                 shouldNotThrowAny { client.getPvpRanks(rankIds) }
             }
-            // FIXME
             expect("Fetch seasons") {
                 val seasonIds = client.getPvpSeasonIds().randomElements(10)
                 shouldNotThrowAny { client.getPvpSeasons(seasonIds) }
