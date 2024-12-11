@@ -15,3 +15,6 @@
 
 # Game mechanics endpoints
 ./gradlew test --tests io.github.kryszak.e2e.gamemechanics.GameMechanicsE2ETests
+
+# Guild public endpoints
+./gradlew test --tests io.github.kryszak.e2e.guild.GuildE2ETests
