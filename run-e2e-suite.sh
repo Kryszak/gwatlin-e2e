@@ -34,3 +34,6 @@ set -euo pipefail
 
 # Miscellaneous endpoints
 ./gradlew test --tests io.github.kryszak.e2e.pvp.PvPE2ETests
+
+# Story endpoints
+./gradlew test --tests io.github.kryszak.e2e.story.StoryE2ETests
