@@ -37,3 +37,6 @@ set -euo pipefail
 
 # Story endpoints
 ./gradlew test --tests io.github.kryszak.e2e.story.StoryE2ETests
+
+# WvW endpoints
+./gradlew test --tests io.github.kryszak.e2e.wvw.WvWE2ETests
