@@ -31,3 +31,6 @@ set -euo pipefail
 
 # Miscellaneous endpoints
 ./gradlew test --tests io.github.kryszak.e2e.miscellaneous.MiscellaneousE2ETests
+
+# Miscellaneous endpoints
+./gradlew test --tests io.github.kryszak.e2e.pvp.PvPE2ETests

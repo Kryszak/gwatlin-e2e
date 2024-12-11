@@ -14,7 +14,7 @@ class MapInfoE2ETests : ExpectSpec() {
 
     init {
         context("Map info") {
-            // FIX ME
+            // FIXME
             expect("Fetch random maps") {
                 val mapInfoIds = client.getMaps().randomElements(100)
                 shouldThrowAny { client.getMaps(mapInfoIds) }
