@@ -11,6 +11,7 @@ class ApiInfoE2ETests : ExpectSpec() {
     private val client = GWApiInfoClient()
 
     init {
+        // TO BE FIXED
         expect("Api information fails due to invalid url") {
             shouldThrowAny { client.getAchievementIdsList() }
         }

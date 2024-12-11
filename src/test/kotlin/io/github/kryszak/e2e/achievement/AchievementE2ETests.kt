@@ -22,6 +22,7 @@ class AchievementE2ETests : ExpectSpec() {
                     client.getAchievementsByIds(achievementIds)
                 }
             }
+            // TO BE FIXED
             expect("Daily achievements returns api not active") {
                 val dailyAchievementException =
                     shouldThrowExactly<ApiRequestException> { client.getDailyAchievements() }

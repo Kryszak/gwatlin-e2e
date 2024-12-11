@@ -12,3 +12,6 @@
 
 # Daily rewards endpoints
 ./gradlew test --tests io.github.kryszak.e2e.dailyrewards.DailyRewardsE2ETests
+
+# Game mechanics endpoints
+./gradlew test --tests io.github.kryszak.e2e.gamemechanics.GameMechanicsE2ETests
