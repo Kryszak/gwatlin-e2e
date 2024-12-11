@@ -7,6 +7,7 @@ import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.core.spec.style.ExpectSpec
 import io.kotest.core.test.TestCaseOrder
 import io.kotest.matchers.string.shouldContain
+import io.melements.integrator.io.github.kryszak.e2e.randomElements
 
 class AchievementE2ETests : ExpectSpec() {
     override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
@@ -16,7 +17,7 @@ class AchievementE2ETests : ExpectSpec() {
     init {
         context("Achievements") {
             expect("Random achievements are fetched correctly") {
-                val achievementIds = client.getAchievementIdsList().shuffled().subList(0, 100)
+                val achievementIds = client.getAchievementIdsList().randomElements(100)
                 shouldNotThrowAny {
                     client.getAchievementsByIds(achievementIds)
                 }

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Achievement endpoints
 ./gradlew test --tests  io.github.kryszak.e2e.achievement.AchievementE2ETests
@@ -6,3 +6,6 @@
 
 # API info endpoints
 ./gradlew test --tests io.github.kryszak.e2e.apiinfo.ApiInfoE2ETests
+
+# Commerce endpoints
+./gradlew test --tests io.github.kryszak.e2e.commerce.CommerceE2ETests
