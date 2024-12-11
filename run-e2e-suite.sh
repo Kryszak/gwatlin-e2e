@@ -2,7 +2,6 @@
 
 # Achievement endpoints
 ./gradlew test --tests  io.github.kryszak.e2e.achievement.AchievementE2ETests
-#sleep 60
 
 # API info endpoints
 ./gradlew test --tests io.github.kryszak.e2e.apiinfo.ApiInfoE2ETests
@@ -18,3 +17,6 @@
 
 # Guild public endpoints
 ./gradlew test --tests io.github.kryszak.e2e.guild.GuildE2ETests
+
+# Home instance endpoints
+./gradlew test --tests io.github.kryszak.e2e.homeinstance.HomeInstanceE2ETests
