@@ -11,7 +11,7 @@ repositories {
     mavenLocal()
 }
 
-val gwatlinVersion = "2.1.3"
+val gwatlinVersion = "2.1.4"
 val kotestVersion = "5.9.1"
 
 dependencies {
