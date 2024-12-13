@@ -3,7 +3,6 @@ package io.github.kryszak.e2e.gamemechanics
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
-import io.kotest.assertions.throwables.shouldThrowAny
 import io.kotest.core.spec.style.ExpectSpec
 import io.kotest.core.test.TestCaseOrder
 import io.melements.integrator.io.github.kryszak.e2e.randomElements
@@ -24,9 +23,9 @@ class GameMechanicsE2ETests : ExpectSpec() {
         context("Masteries") {
             val client = GWMasteriesClient()
             expect("Fetching random masteries") {
-                val masteriesId = client.getMasteriesIds()
+                val masteryIds = client.getMasteriesIds()
                 shouldNotThrowAny {
-                    client.getMasteries(masteriesId)
+                    client.getMasteries(masteryIds)
                 }
             }
             expect("Fetching all masteries in german language") {
@@ -84,10 +83,9 @@ class GameMechanicsE2ETests : ExpectSpec() {
         }
         context("Traits") {
             val client = GWTraitsClient()
-            // FIXME
             expect("Fetching random traits") {
                 val traitIds = client.getTraitIds().randomElements(100)
-                shouldThrowAny { client.getTraits(traitIds) }
+                shouldNotThrowAny { client.getTraits(traitIds) }
             }
         }
     }
