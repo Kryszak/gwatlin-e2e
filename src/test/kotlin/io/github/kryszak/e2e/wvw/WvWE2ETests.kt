@@ -6,7 +6,7 @@ import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrowAny
 import io.kotest.core.spec.style.ExpectSpec
 import io.kotest.core.test.TestCaseOrder
-import io.melements.integrator.io.github.kryszak.e2e.randomElements
+import io.github.kryszak.e2e.randomElements
 
 class WvWE2ETests : ExpectSpec() {
     override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
