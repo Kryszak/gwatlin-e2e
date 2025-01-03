@@ -12,7 +12,6 @@ class WvWE2ETests : ExpectSpec() {
 
     private val client = GWWvwClient()
 
-
     init {
         context("WvW") {
             expect("Fetch abilities") {
