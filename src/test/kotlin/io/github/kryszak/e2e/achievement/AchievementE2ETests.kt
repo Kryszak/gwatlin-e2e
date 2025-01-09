@@ -30,16 +30,16 @@ class AchievementE2ETests : ExpectSpec() {
                     shouldThrowExactly<ApiRequestException> { client.getDailyTomorrowAchievements() }
                 tomorrowDailyAchievementException.message shouldContain "API not active"
             }
-            expect("Achievement category is fetched correctly") {
-                val categoryIds = client.getAchievementCategoryIds()
+            expect("Achievement categories is fetched correctly") {
+                val categoryIds = client.getAchievementCategoryIds().randomElements(200)
                 shouldNotThrowAny {
-                    client.getAchievementCategory(categoryIds.random())
+                    client.getAchievementCategories(categoryIds)
                 }
             }
-            expect("Achievement group is fetched correctly") {
+            expect("Achievement groups is fetched correctly") {
                 val groupIds = client.getAchievementGroupIds()
                 shouldNotThrowAny {
-                    client.getAchievementGroup(groupIds.random())
+                    client.getAchievementGroups(groupIds)
                 }
             }
         }
