@@ -1,17 +1,14 @@
 package io.github.kryszak.e2e.achievement
 
+import io.github.kryszak.e2e.BaseE2ESpec
+import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.achievement.GWAchievementsClient
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrowExactly
-import io.kotest.core.spec.style.ExpectSpec
-import io.kotest.core.test.TestCaseOrder
 import io.kotest.matchers.string.shouldContain
-import io.github.kryszak.e2e.randomElements
 
-class AchievementE2ETests : ExpectSpec() {
-    override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
-
+class AchievementE2ETests : BaseE2ESpec() {
     private val client = GWAchievementsClient()
 
     init {

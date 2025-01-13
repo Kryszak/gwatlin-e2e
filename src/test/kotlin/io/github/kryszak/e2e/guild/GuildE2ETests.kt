@@ -1,14 +1,11 @@
 package io.github.kryszak.e2e.guild
 
+import io.github.kryszak.e2e.BaseE2ESpec
+import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.guild.GWGuildClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
-import io.kotest.core.spec.style.ExpectSpec
-import io.kotest.core.test.TestCaseOrder
-import io.github.kryszak.e2e.randomElements
 
-class GuildE2ETests : ExpectSpec() {
-    override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
-
+class GuildE2ETests : BaseE2ESpec() {
     init {
         context("Guild unauthenticated") {
             val client = GWGuildClient()

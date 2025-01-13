@@ -1,15 +1,12 @@
 package io.github.kryszak.e2e.gamemechanics
 
+import io.github.kryszak.e2e.BaseE2ESpec
+import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
-import io.kotest.core.spec.style.ExpectSpec
-import io.kotest.core.test.TestCaseOrder
-import io.github.kryszak.e2e.randomElements
 
-class GameMechanicsE2ETests : ExpectSpec() {
-    override fun testCaseOrder(): TestCaseOrder = TestCaseOrder.Sequential
-
+class GameMechanicsE2ETests : BaseE2ESpec() {
     init {
         context("Legends") {
             val client = GWLegendsClient()
@@ -62,9 +59,9 @@ class GameMechanicsE2ETests : ExpectSpec() {
         }
         context("Races") {
             val client = GWRacesClient()
-            expect("Fetching random race") {
-                val raceId = client.getRaceIds().random()
-                shouldNotThrowAny { client.getRace(raceId) }
+            expect("Fetching races") {
+                val raceIds = client.getRaceIds()
+                shouldNotThrowAny { client.getRaces(raceIds) }
             }
         }
         context("Skills") {
