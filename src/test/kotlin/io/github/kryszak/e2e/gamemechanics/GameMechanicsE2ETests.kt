@@ -73,9 +73,9 @@ class GameMechanicsE2ETests : BaseE2ESpec() {
         }
         context("Specializations") {
             val client = GWSpecializationClient()
-            expect("Fetching random specialization") {
-                val specializationId = client.getSpecializationIds().random()
-                shouldNotThrowAny { client.getSpecialization(specializationId) }
+            expect("Fetching specializations") {
+                val specializationIds = client.getSpecializationIds()
+                shouldNotThrowAny { client.getSpecializations(specializationIds) }
             }
         }
         context("Traits") {
